@@ -14,7 +14,7 @@ var baseRegex = "\\s*[@#]\\s*sourceMappingURL\\s*=\\s*([^\\s]*)",
 	// Matches // .... comments
 	regex2 = new RegExp("//"+baseRegex+"($|\n|\r\n?)"),
 	// Matches DataUrls
-	regexDataUrl = /data:[^;\n]+;base64,(.*)/;
+	regexDataUrl = /data:.*=?;base64,(.*)/;
 
 module.exports = function(input, inputMap) {
 	this.cacheable && this.cacheable();
